@@ -6,14 +6,14 @@ Steps For Installation
 3. Run "vagrant up" command to create new virtual box for project
 4. Run "vagrant ssh" to ssh into new vm
 5. "cd" in /public folder by running /var/www/public
-6. Run "composer install"
-7. "cd" into /sites-enabled folder to change vhost settings by running /etc/apache2/sites-enabled
-8. Run "sudo vim 000-default.conf" to open file in command line editor
-9. hit "i" on keyboard to enter "insert mode" and Set your DocumentRoot to "/var/www/public/web". Hit esc to exit insert mode and then    type ":wq" to write the changes to the file and quit vim.
-10. Run "sudo service apache2 restart"
-11. Run "cd /var/www/public" to get back to public folder
-11. Run "sudo vim .env" to edit the databse config settings
-12. Change settings to look like below for development environment.  Also make sure to change your url form example.dev to            192.168.33.10
+6. "cd" into /sites-enabled folder to change vhost settings by running /etc/apache2/sites-enabled
+7. Run "sudo vim 000-default.conf" to open file in command line editor
+8. hit "i" on keyboard to enter "insert mode" and Set your DocumentRoot to "/var/www/public/web". Hit esc to exit insert mode and then    type ":wq" to write the changes to the file and quit vim.
+9. Run "sudo service apache2 restart"
+10. Run "cd /var/www/public" to get back to public folder
+11. Run "composer install"
+12. Run "sudo vim .env" to edit the databse config settings
+13. Change settings to look like below for development environment.  Also make sure to change your url form example.dev to                192.168.33.10
 
     DB_NAME=scotchbox
     DB_USER=root
