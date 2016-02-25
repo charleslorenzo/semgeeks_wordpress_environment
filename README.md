@@ -13,7 +13,7 @@ Steps For Installation
 10. Run "sudo service apache2 restart"
 11. Run "cd /var/www/public" to get back to public folder
 11. Run "sudo vim .env" to edit the databse config settings
-12. Change settings to look like below for development phase
+12. Change settings to look like below for development environment.  Also make sure to change your url form example.dev to            192.168.33.10
 
     DB_NAME=scotchbox
     DB_USER=root
