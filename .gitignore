@@ -1,0 +1,76 @@
+# Application
+public/web/app/plugins/*
+public/web/app/mu-plugins/*
+public/web/app/upgrade
+public/web/app/uploads/*
+public/web/wp-config.php
+
+
+# WordPress
+public/web/wp
+public/web/.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+
+# Vendor (e.g. Composer)
+public/vendor/*
+
+
+# Node Package Manager
+public/web/app/themes/worpdess/node_modules/*
+
+# Vagrant
+bin
+.vagrant
+.DS_store
+
+# CACHE #
+#########
+
+public/web/app/upgrade/
+public/web/app/advanced-cache.php
+public/web/app/wp-cache-config.php
+public/web/app/cache/*
+
+# Sitemaps #
+###################
+sitemap.xml
+sitemap.xml.gz
+
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
