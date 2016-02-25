@@ -1,3 +1,30 @@
+Steps For Installation
+======================
+
+1. Run git clone https://github.com/semgeeks/semgeeks_wordpress_environment.git
+2. Rename Project to desired name and "cd" into the directory
+3. Run "vagrant up" command to create new virtual box for project
+4. Run "vagrant ssh" to ssh into new vm
+5. "cd" in /public folder by running /var/www/public
+6. Run "composer install"
+7. "cd" into /sites-enabled folder to change vhost settings by running /etc/apache2/sites-enabled
+8. Run "sudo vim 000-default.conf" to open file in command line editor
+9. hit "i" on keyboard to enter "insert mode" and Set your DocumentRoot to "/var/www/public/web". Hit esc to exit insert mode and then    type ":wq" to write the changes to the file and quit vim.
+10. Run "sudo service apache2 restart"
+11. Run "cd /var/www/public" to get back to public folder
+11. Run "sudo vim .env" to edit the databse config settings
+12. Change settings to look like below for development phase
+
+    DB_NAME=scotchbox
+    DB_USER=root
+    DB_PASSWORD=root
+    DB_HOST=localhost
+13. "cd" in the worpdess theme by running "cd web/app/themes/worpdess"
+14. Run "npm install" then "bower install"
+15. from your theme directory you can now run gulp watch to start watching sass files for changes
+
+
+
 Scotch Box
 ==========
 
