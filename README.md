@@ -1,5 +1,5 @@
 
-Semgeeks Wordpress Environment is a mish mosh of the scotchbox vagrant setup, the bedrock wordpress installation, and the sage starter wordpress theme that we have adjust to fit our development needs. A big thank you to the aforementioned open source projects.
+Semgeeks Wordpress Environment is a mish mosh of the scotchbox vagrant setup, the bedrock wordpress installation, and the sage starter wordpress theme that we have adjusted to fit our development needs. A big thank you to the aforementioned open source projects for all of their great work.
 
 Steps For Installation
 ======================
