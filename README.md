@@ -24,7 +24,8 @@ Steps For Installation
     DB_HOST=localhost
 13. "cd" in the worpdess theme by running "cd web/app/themes/worpdess"
 14. Run "npm install" then "bower install"
-15. From your theme directory you can now run gulp watch to start watching sass files for changes(you may need to run "npm rebuild node-sass" if there are conflicts"
+15. Navigate to the admin area of wordpress and choose the semgeeks theme
+16. From your theme directory you can now run gulp watch to start watching sass files for changes(you may need to run "npm rebuild node-sass" if there are conflicts"
 
 
 
