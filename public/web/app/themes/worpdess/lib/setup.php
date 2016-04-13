@@ -105,11 +105,11 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
-  // Semgeeks Utility Functions
-  wp_enqueue_script('utilities-js', Assets\asset_path('scripts/semgeeks-utils.js'), [], null, true);
+  // // Semgeeks Utility Functions
+  // wp_enqueue_script('utilities-js', Assets\asset_path('scripts/semgeeks-utils.js'), [], null, true);
 
-  // Vendor Additions
-  wp_enqueue_script('select-js', Assets\asset_path('scripts/select.js'), [], null, true);
+  // // Vendor Additions
+  // wp_enqueue_script('select-js', Assets\asset_path('scripts/select.js'), [], null, true);
 
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
