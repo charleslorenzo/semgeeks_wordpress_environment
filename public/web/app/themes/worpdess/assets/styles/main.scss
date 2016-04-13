@@ -3,9 +3,22 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Sass Extensions
+# Site Variables
+	## Colors
+	## Structure
+	## Transitions
+	## Typography (Font Settings)
+# Custom Mixins
 # Typography
+	## Copy
+	## Headings
 # Elements
+	## Lists
+	## Tables
 # Forms
+	## Buttons
+	## Fields
 # Navigation
 	## Links
 	## Menus
@@ -13,30 +26,43 @@
 # Alignments
 # Clearings
 # Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
+# Site Content
+	## Primary
+	    ### Posts and pages
+		### Asides
+		### Comments
+		### Front Page
+		### About Us 
+		### Contact Us
+	## Secondary
+		### Global Commons
+		### Widgets
 # Infinite scroll
 # Media
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
 
-/* ####### bourbon ####### */
-@import "sass/sass_extentions/bourbon/bourbon";
-
-/* ###### Neat Grid ####### */
-
-@import "sass/sass_extentions/neat/neat";
-
-@import "sass/variables-site/variables-site";
-@import "sass/mixins/mixins-master";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "sass/normalize";
+
+/*--------------------------------------------------------------
+# Sass Extensions
+--------------------------------------------------------------*/
+@import "sass/sass-extensions/extensions";
+
+/*--------------------------------------------------------------
+# Site Variables
+--------------------------------------------------------------*/
+@import "sass/variables-site/variables-site";
+
+/*--------------------------------------------------------------
+# Custom Mixins
+--------------------------------------------------------------*/
+@import "sass/mixins/mixins-master";
 
 /*--------------------------------------------------------------
 # Typography

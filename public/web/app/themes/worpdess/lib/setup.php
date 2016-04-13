@@ -86,6 +86,10 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+
+    // Preventing Sidebar from showing on any page and post by default
+    is_page(),
+    is_single(),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -101,6 +105,24 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
+  // Semgeeks Utility Functions
+  wp_enqueue_script('utilities-js', Assets\asset_path('scripts/semgeeks-utils.js'), [], null, true);
+
+  // Vendor Additions
+  wp_enqueue_script('select-js', Assets\asset_path('scripts/select.js'), [], null, true);
+
+
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
+/**
+ * Create new custom post types
+ */
+function custom_post_types() 
+{
+
+ 
+}
+add_action( 'init', __NAMESPACE__ . '\\custom_post_types' );

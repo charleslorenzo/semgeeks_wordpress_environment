@@ -2,7 +2,9 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js"
+        "scripts/semgeeks-utils.js",
+        "scripts/select.js",
+        "scripts/main.js",
       ],
       "main": true
     },

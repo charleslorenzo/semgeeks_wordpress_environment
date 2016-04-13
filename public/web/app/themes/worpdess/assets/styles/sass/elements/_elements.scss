@@ -1,11 +1,18 @@
 html {
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 *,
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
+
+	:focus
+	{
+		outline: 0;
+	}
 }
 
 body {
@@ -33,6 +40,27 @@ hr {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+	-moz-user-select: none;
 }
 
 @import "tables";
+
+
+// Changes the highlight color of highlighted text/elements.
+	// Notes: Does not always work if there are empty <p> tags on the page, or other miscellaneous things such as <br>. Recommended to use margins/padding to space out elements.
+	//       They cannot be combined together into one group with a comma for whatever reason. Using mixin to get around this.
+@mixin selectionStyles()
+{
+	background: $color__highlighted;
+}
+
+::selection 
+{
+	/* WebKit/Blink Browsers */
+	@include selectionStyles();
+}
+::-moz-selection 
+{
+	/* Gecko Browsers */
+	@include selectionStyles();
+}

@@ -1,0 +1,1 @@
+<h1 style="text-align: center;">Your brand new, super awesome front page.</h1>

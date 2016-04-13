@@ -20,6 +20,12 @@ function body_class($classes) {
     $classes[] = 'sidebar-primary';
   }
 
+  // Add class if not the front page
+  if (!is_front_page())
+  {
+    $classes[] = 'not-front';
+  }
+
   return $classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');

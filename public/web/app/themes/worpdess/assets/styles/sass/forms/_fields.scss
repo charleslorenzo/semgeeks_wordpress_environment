@@ -14,17 +14,53 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
+	border: 1px solid $color__white-smoke;
+	box-shadow: none;
+	border-radius: 0;
+	width: 100%;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	resize: none;
+	-webkit-appearance: none;
+
+	font-family: $font__sec;
 
 	&:focus {
-		color: $color__text-input-focus;
+		
+	}
+
+	&.wpcf7-not-valid
+	{
+		border-color: $color__invalid;
+	}
+
+	& + .wpcf7-not-valid-tip
+	{
+		display: none;
 	}
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 1px solid $color__white-smoke;
+	width: 100%;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+
+	&.wpcf7-not-valid
+	{
+		border-color: $color__invalid;
+	}
+
+	& + .wpcf7-not-valid-tip
+	{
+		display: none;
+	}
+
+	option
+	{
+		display: block;
+		padding: 10px 0;
+	}
 }
 
 input[type="text"],
@@ -42,10 +78,54 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-	padding: 3px;
+	
 }
 
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+
+div.wpcf7-response-output
+{
+	padding: 10px;
+
+	&.wpcf7-validation-errors
+	{
+		color: $color__invalid;
+		border: solid 2px $color__invalid;
+	}
+
+	&.wpcf7-mail-sent-ok
+	{
+		
+	}
+}
+
+
+// HTML5 form placeholder pseudo-selector
+	// Notes: They cannot be combined together into one group with a comma for whatever reason. Using mixin to get around this.
+@mixin placeholderStyles()
+{
+	
+}
+
+::-webkit-input-placeholder 
+{
+  	@include placeholderStyles();
+}
+::-moz-placeholder 
+{ 
+	/* Firefox 19+ */
+	@include placeholderStyles();
+}
+:-moz-placeholder 
+{ 
+	/* Firefox 18- */
+	@include placeholderStyles();
+}
+:-ms-input-placeholder 
+{
+	@include placeholderStyles();
 }
