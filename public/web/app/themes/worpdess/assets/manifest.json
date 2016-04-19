@@ -4,7 +4,7 @@
       "files": [
         "scripts/semgeeks-utils.js",
         "scripts/select.js",
-        "scripts/main.js",
+        "scripts/main.js"
       ],
       "main": true
     },
