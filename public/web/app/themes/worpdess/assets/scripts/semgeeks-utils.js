@@ -1,4 +1,3 @@
-jQuery(document).ready(function() {
 /* ========================================================================
  * 								Site Variables
  * ======================================================================== */
@@ -109,22 +108,6 @@ jQuery(document).ready(function() {
 	    }
 	}
 
-	// For smooth scrolling on pages with page anchors
-		// ***Preventing updating url in address bar. Uncomment below lines to remove this.
-	jQuery('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-
-	    //var target = this.hash;
-	    var $target = jQuery(target);
-
-	    jQuery('html, body').stop().animate({
-	        'scrollTop': ($target.offset().top - adminBarHeight - fixedHeaderHeight)
-	    }, 700, 'swing', function () {
-	        //window.location.hash = target;
-	    });
-	});
-
-
 
 	jQuery.fn.extend({
 		// Searches for a text string and wraps with an HTML tag.
@@ -194,6 +177,23 @@ jQuery(document).ready(function() {
  * 							Function Executions
  * ======================================================================== */
 
+
+jQuery(document).ready(function() {
+
+	// For smooth scrolling on pages with page anchors
+	// ***Preventing updating url in address bar. Uncomment below lines to remove this.
+	jQuery('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    //var target = this.hash;
+	    var $target = jQuery(target);
+
+	    jQuery('html, body').stop().animate({
+	        'scrollTop': ($target.offset().top - adminBarHeight - fixedHeaderHeight)
+	    }, 700, 'swing', function () {
+	        //window.location.hash = target;
+	    });
+	});
 
 	// Execute menu toggle functions when clicking on the nav trigger
 	jQuery('.nav-toggle').on('click', function() {
