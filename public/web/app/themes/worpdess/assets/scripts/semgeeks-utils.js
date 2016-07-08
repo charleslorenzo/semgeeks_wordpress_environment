@@ -109,6 +109,22 @@
 	}
 
 
+	// Detects a click/or tap anywhere outside of a selected container and its children.
+    //	@containerObject - jQuery object to detect clicks/taps outside of.
+    // 	@todoFunction - function to be executed if detection was successful
+    function detectClickOutside(containerObject, todoFunction)
+    {
+	    jQuery(document).on('click touchstart', function(e) {
+			var container = containerObject;
+
+			if(!container.is(e.target) && container.has(e.target).length == 0)
+			{
+				todoFunction();
+			}
+	   });
+    }
+
+
 	jQuery.fn.extend({
 		// Searches for a text string and wraps with an HTML tag.
 		//  @string  - string to be searched for
@@ -127,19 +143,6 @@
 					jQuery(this).html(jQuery(this).html().replace(stringRE, '<' + tag + ' class="' + classes + '">' + string + '</' + tag + '>'));
 				}
 			});
-		},
-		// Detects a click/or tap anywhere outside of a selected container and its children.
-		// 	@todoFunction - function to be executed if detection was successful
-		detectClickOutside: function(todoFunction) 
-		{
-			jQuery(document).on('click touchstart', function(e) {
-				var container = jQuery(this);
-
-				if(!container.is(e.target) && container.has(e.target).length == 0)
-				{
-					todoFunction();
-				}
-		    });
 		},
 		// Removes any previously set widths/heights on an element
 		resetDimensions: function()
@@ -185,7 +188,7 @@ jQuery(document).ready(function() {
 	jQuery('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 
-	    //var target = this.hash;
+	    var target = this.hash;
 	    var $target = jQuery(target);
 
 	    jQuery('html, body').stop().animate({

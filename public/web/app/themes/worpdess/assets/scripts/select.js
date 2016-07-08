@@ -112,8 +112,7 @@ function tamingselect()
 	}
 }
 
-window.onload=function()
-{
+jQuery(window).load(function() {
 	tamingselect();
 	// add more functions if necessary
 
@@ -128,4 +127,4 @@ window.onload=function()
 			jQuery(convertedDDContainers).find('.dropdownvisible').removeClass('dropdownvisible').addClass('dropdownhidden');
 		}
 	});
-}
+});
