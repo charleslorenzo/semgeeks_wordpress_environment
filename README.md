@@ -1,6 +1,18 @@
 
 Semgeeks Wordpress Environment is a mish mosh of the scotchbox vagrant setup, the bedrock wordpress installation, and the sage starter wordpress theme that we have adjusted to fit our development needs. A big thank you to the aforementioned open source projects for all of their great work.
 
+!important
+==========
+Necessary software on host machine:
+1. Vagrant
+2. Node.js
+3. Ruby
+4. Bower
+5. Gulp
+7. Google Chrome (recommended)
+6. Sublime Text 3 (recommended)
+
+
 Steps For Installation
 ======================
 
@@ -14,8 +26,8 @@ Steps For Installation
 8. hit "i" on keyboard to enter "insert mode" and Set your DocumentRoot to "/var/www/public/web". Hit esc to exit insert mode and then    type ":wq" to write the changes to the file and quit vim.
 9. Run "sudo service apache2 restart"
 10. Run "cd /var/www/public" to get back to public folder
-11. Run "composer install"
-12. Run "sudo vim .env" to edit the databse config settings
+11. Run "composer install" and "composer update"
+12. Run "sudo vim .env" to edit the database config settings
 13. Change settings to look like below for development environment.  Also make sure to change your url form example.dev to                192.168.33.10
 
     DB_NAME=scotchbox
